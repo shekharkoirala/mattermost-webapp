@@ -37,7 +37,8 @@ export default class Textbox extends React.Component {
         emojiEnabled: PropTypes.bool,
         isRHS: PropTypes.bool,
         popoverMentionKeyClick: PropTypes.bool,
-        characterLimit: PropTypes.number
+        characterLimit: PropTypes.number,
+        disabled: PropTypes.bool
     };
 
     static defaultProps = {
@@ -318,6 +319,7 @@ export default class Textbox extends React.Component {
                     renderDividers={true}
                     isRHS={this.props.isRHS}
                     popoverMentionKeyClick={this.props.popoverMentionKeyClick}
+                    disabled={this.props.disabled}
                 />
                 {preview}
                 <div className={'help__text ' + helpTextClass}>
